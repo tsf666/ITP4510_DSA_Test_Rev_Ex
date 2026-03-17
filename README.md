@@ -63,3 +63,17 @@ prompt：
 
 有任何需要可email
 250335363@stu.vtc.edu.hk
+
+---
+
+I don't mind assignments being frequently made public, but I believe many things are predestined. Everyone must and will inevitably have their own unique experiences; these experiences are essential for growth.
+
+Regarding sharing other people's assignments, if you feel it helps your learning in any way, you're welcome to do so. Feel free to contact me directly; I'll start a GitHub repository where we can exchange learning experiences.
+
+Compared to society, in school, we are all fellow learners with no conflict of interest, and we should learn from each other.
+
+Sometimes I may not provide assignments to those who ask for them. This is because I don't see in some people qualities that would make me generous, nor do I have anything of value to exchange. More importantly, I believe some paths are simply necessary to take.
+
+For any inquiries, please email 250335363@stu.vtc.edu.hk
+
+---
