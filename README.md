@@ -1,3 +1,11 @@
+***
+
+For the *.md file type, you can read & edit by Zettlr
+
+https://github.com/Zettlr/Zettlr
+
+***
+
 ## 📄 Open Learning & Collaborative Growth | 开放学习与共同成长
 
 ### 💡 Philosophy | 初心与理念
