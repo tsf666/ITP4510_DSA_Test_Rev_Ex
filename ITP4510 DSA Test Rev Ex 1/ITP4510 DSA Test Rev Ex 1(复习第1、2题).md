@@ -71,7 +71,7 @@ public class Button extends Rectangle implements Clickable
 
 * `Button` 继承 `Rectangle`（而 `Rectangle` 又继承 `Shape`）。
 * 同时实现接口 `Clickable`。
-* 所以它必须实现 `click()` 和 `doubleClick()`。
+
 
 ***
 
@@ -80,7 +80,7 @@ public class Button extends Rectangle implements Clickable
 * 从 `Clickable` 接口继承的：`click()` 和 `doubleClick()`。
 * 从 UML 图里 Button 自己定义的：`getType()`。
 * 所以答案是：**click, doubleClick, getType**。
-
+* 所以它必须实现 `click()` 和 `doubleClick()`。
 ***
 
 ### (e) 编译错误分析
@@ -610,6 +610,87 @@ Finish
 我的提示词不变，但是是链式执行下一个问题，请准确理解问题
 
 请按同样的提示词，解析下一题答案
+
+
+---
+
+
+
+好的，我们继续链式解析第五个代码片段 **`if (a[2] > 10) throw new CustExp1(); else throw new CustExp2();`**，并回答你的提示词：
+
+***
+
+## 📌 为什么题目 (f) 会触发 `catch (CustExp1 e)`？
+
+### 1. 看数组内容
+
+```java
+int[] a = {23, 8, 11, 2, 0};
+```
+
+* `a[2] = 11`
+
+### 2. 条件判断
+
+```java
+if (a[2] > 10)
+```
+
+* 判断的是 `11 > 10` → 条件成立。
+* 所以执行 `throw new CustExp1();`。
+
+### 3. 异常抛出
+
+* 程序显式抛出了一个 `CustExp1` 异常。
+* 这不是系统自动抛出的，而是代码里写死的。
+
+### 4. 异常捕获
+
+* JVM 抛出 `CustExp1`。
+* 程序进入 `catch (CustExp1 e)`，打印 `"CE1"`。
+* 然后进入 `finally`，打印 `"Finish"`。
+
+***
+
+## 📌 Flow of Event（事件流程）
+
+1. 进入 `try` 块。
+2. 执行条件判断：`a[2] = 11 > 10` → 成立。
+3. 执行 `throw new CustExp1();`。
+4. JVM 抛出 `CustExp1`。
+5. 程序进入 `catch (CustExp1 e)`，打印 `"CE1"`。
+6. 执行 `finally`，打印 `"Finish"`。
+
+***
+
+## 📌 最终输出
+
+```
+CE1
+Finish
+```
+
+***
+
+## 🎯 总结
+
+* **关键点**：`a[2] = 11`，满足条件 → 显式抛出 `CustExp1`。
+* **结果**：进入对应的 `catch` → 输出 `"CE1"` 和 `"Finish"`。
+
+***
+
+要不要我接下来帮你解析 **第七个代码片段 (g)**，它涉及显式抛出 `CustExp2`，所以会进入另一个 `catch` 分支？
+
+
+
+---
+
+
+我的提示词不变，但是是链式执行下一个问题，请准确理解问题
+
+请按同样的提示词，解析下一题答案
+
+
 
 
 
